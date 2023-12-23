@@ -28,17 +28,39 @@ The Employee Management System is a web application built with Spring Boot, Spri
 
 1. **Clone the Repository:**
 
+## Database Configuration
 
-## Database Configuration:
+The Employee Management System uses MySQL as its database. Follow these steps to configure the database:
 
-1. Set up a MySQL database with the name emp.
+1. **Create MySQL Database:**
 
-2. Update the database connection properties in src/main/resources/application.properties with your MySQL credentials.
+   - Open your MySQL database management tool (e.g., MySQL Workbench).
+   - Create a new database named `emp`.
 
-3. Run the Application:
-- Execute the following command to run the application:
-./mvnw spring-boot:run
+2. **Update Application Properties:**
 
-4. Access the Application:
--  Open a web browser and go to http://localhost:8080 to access the application.
+   - Open the `src/main/resources/application.properties` file.
+   - Update the following properties with your MySQL database credentials:
+
+     ```properties
+     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+     spring.datasource.url=jdbc:mysql://localhost:3306/emp
+     spring.datasource.username=your-mysql-username
+     spring.datasource.password=your-mysql-password
+     ```
+
+     Replace `your-mysql-username` and `your-mysql-password` with your MySQL username and password.
+
+3. **Run the Application:**
+
+   - After configuring the database, run the application using the following command:
+     ./mvnw spring-boot:run
+
+   - The application will connect to the MySQL database based on the provided configuration.
+
+4. **Access the Application:**
+
+   - Open a web browser and navigate to `http://localhost:8080` to access the Employee Management System.
+
+Now, your application is configured to use the MySQL database for storing and retrieving employee records.
 
