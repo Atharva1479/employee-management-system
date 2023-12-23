@@ -10,8 +10,6 @@ The Employee Management System is a web application built with Spring Boot, Spri
 
 - **Delete Employee:** Remove employee records from the system.
 
-- **Paginated Display:** View employee records in a paginated format for better organization.
-
 ## Technologies Used
 
 - **Spring Boot:** Framework for building Java-based enterprise applications.
@@ -27,6 +25,8 @@ The Employee Management System is a web application built with Spring Boot, Spri
 ## Setup
 
 1. **Clone the Repository:**
+   ```bash
+   https://github.com/Atharva1479/employee-management-system.git
 
 ## Database Configuration
 
@@ -54,8 +54,9 @@ The Employee Management System uses MySQL as its database. Follow these steps to
 3. **Run the Application:**
 
    - After configuring the database, run the application using the following command:
+     ```bash
      ./mvnw spring-boot:run
-
+     ```
    - The application will connect to the MySQL database based on the provided configuration.
 
 4. **Access the Application:**
